@@ -5,7 +5,7 @@
 <xacro:include filename="$(find quadcopter_ros)/urdf/quadcopter.trans" />
 <xacro:include filename="$(find quadcopter_ros)/urdf/quadcopter.gazebo" />
 <xacro:include filename="$(find quadcopter_ros)/urdf/quadmotor.xacro" />
- 
+<xacro:include filename="$(find quadcopter_ros)/urdf/quadsensors.xacro" />
   <!-- making cylinder body approximation-->
   <!-- Inertia constants {-->
   <xacro:property name="mass" value="0.614" /> <!-- [kg] -->
