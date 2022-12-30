@@ -1,0 +1,36 @@
+<launch>
+
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="true"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <arg name="x" default="0" />
+  <arg name="y" default="0" />
+  <arg name="z" default="0.1" />
+  <arg name="P" default="0" />
+  <arg name="R" default="0" />
+  <arg name="Y" default="0" />
+
+  <param name="robot_description" command="$(find xacro)/xacro $(find quadcopter_description)/urdf/quadcopter.xacro"/>
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" 
+        args="-x $(arg x) -y $(arg y) -z $(arg z)
+              -R $(arg R) -P $(arg P) -Y $(arg Y)
+              -param robot_description -urdf -model quadcopter"/>
+
+  <rosparam file="$(find quadcopter_description)/config/quad_control.yaml" command="load" />
+  <node name="control_spawner" 
+        pkg="controller_manager" 
+        type="spawner" 
+        respawn="false" 
+        output="screen" 
+        ns="/quad"
+        args="joint_state_controller joint_motor_controller" />
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
+  
+</launch>

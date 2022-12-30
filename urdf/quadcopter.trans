@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<robot name="quadcopter" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="propjoint1_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="propjoint1">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="propjoint1_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="propjoint2_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="propjoint2">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="propjoint2_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="propjoint3_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="propjoint3">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="propjoint3_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="propjoint4_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="propjoint4">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="propjoint4_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>
