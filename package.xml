@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>quadcopter_description</name>
+  <name>quadcopter_ros</name>
   <version>0.0.0</version>
-<description>The quadcopter_description package</description>
+<description>The quadcopter_ros package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->

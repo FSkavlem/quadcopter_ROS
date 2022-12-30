@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <robot name="quadcopter" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find quadcopter_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find quadcopter_description)/urdf/quadcopter.trans" />
-<xacro:include filename="$(find quadcopter_description)/urdf/quadcopter.gazebo" />
-<xacro:include filename="$(find quadcopter_description)/urdf/quadmotor.xacro" />
+<xacro:include filename="$(find quadcopter_ros)/urdf/materials.xacro" />
+<xacro:include filename="$(find quadcopter_ros)/urdf/quadcopter.trans" />
+<xacro:include filename="$(find quadcopter_ros)/urdf/quadcopter.gazebo" />
+<xacro:include filename="$(find quadcopter_ros)/urdf/quadmotor.xacro" />
  
   <!-- making cylinder body approximation-->
   <!-- Inertia constants {-->
@@ -32,14 +32,14 @@
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://quadcopter_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://quadcopter_ros/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="plastic_glossy_grey"/>
   </visual>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://quadcopter_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://quadcopter_ros/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -53,14 +53,14 @@
   <visual>
     <origin xyz="-0.076368 0.099475 -0.03342" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://quadcopter_description/meshes/prop1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://quadcopter_ros/meshes/prop1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="abs_white"/>
   </visual>
   <collision>
     <origin xyz="-0.076368 0.099475 -0.03342" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://quadcopter_description/meshes/prop1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://quadcopter_ros/meshes/prop1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -74,14 +74,14 @@
   <visual>
     <origin xyz="0.077777 0.099475 -0.03342" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://quadcopter_description/meshes/prop2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://quadcopter_ros/meshes/prop2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="abs_white"/>
   </visual>
   <collision>
     <origin xyz="0.077777 0.099475 -0.03342" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://quadcopter_description/meshes/prop2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://quadcopter_ros/meshes/prop2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -95,14 +95,14 @@
   <visual>
     <origin xyz="0.077777 -0.099475 -0.03342" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://quadcopter_description/meshes/prop3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://quadcopter_ros/meshes/prop3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="abs_white"/>
   </visual>
   <collision>
     <origin xyz="0.077777 -0.099475 -0.03342" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://quadcopter_description/meshes/prop3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://quadcopter_ros/meshes/prop3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -116,14 +116,14 @@
   <visual>
     <origin xyz="-0.076368 -0.099474 -0.03342" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://quadcopter_description/meshes/prop4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://quadcopter_ros/meshes/prop4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="abs_white"/>
   </visual>
   <collision>
     <origin xyz="-0.076368 -0.099474 -0.03342" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://quadcopter_description/meshes/prop4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://quadcopter_ros/meshes/prop4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
